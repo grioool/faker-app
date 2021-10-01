@@ -12,7 +12,7 @@ namespace App
             Faker faker = new Faker(fakerConfig);
             for (int i = 0; i < 10; i++)
                 Console.WriteLine("--------------------------------------------------\n" +
-                                  LittleFormatter.Format(faker.Create<MyExample>().ToString())
+                                  Formatter.Format(faker.Create<MyExample>().ToString())
                 );
         }
     }

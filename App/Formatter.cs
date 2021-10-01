@@ -2,7 +2,7 @@
 
 namespace App
 {
-    public static class LittleFormatter
+    public static class Formatter
     {
         public static string Format(string unformatted)
         {
@@ -15,7 +15,6 @@ namespace App
             int level = 0;
             for (int i = 0; i < chars.Length; i++)
             {
-                // Pass string literal...
                 if (chars[i] == '\'')
                 {
                     formatted.Append(chars[i++]);
@@ -24,7 +23,6 @@ namespace App
                     formatted.Append(chars[i++]);
                 }
 
-                // ...and then continue
                 if (IsAppendingLevel(chars[i]))
                     level++;
                 if (IsDependingLevel(chars[i]))
